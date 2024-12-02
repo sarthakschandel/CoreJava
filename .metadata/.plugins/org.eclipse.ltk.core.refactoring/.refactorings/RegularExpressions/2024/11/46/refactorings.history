@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.bharath.java.re&apos; to &apos;com.sarthak.java.regularexpressions&apos;&#x0D;&#x0A;- Original project: &apos;RegularExpressions&apos;&#x0D;&#x0A;- Original element: &apos;RegularExpressions/src/com.bharath.java.re&apos;&#x0D;&#x0A;- Renamed element: &apos;RegularExpressions/src/com.sarthak.java.regularexpressions&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.bharath.java.re&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.bharath.java.re" name="com.sarthak.java.regularexpressions" qualified="false" references="true" stamp="1731506310325" textual="false" version="1.0"/>
+</session>

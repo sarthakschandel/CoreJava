@@ -1,0 +1,30 @@
+Object Class Methods
+
+
+1. Objective: The objective is to create an `ElectricityBill` class with the following three properties:
+   - `meterNo`: Represents the meter number associated with the electricity bill.
+   - `name`: Represents the name of the customer who will receive the electricity bill.
+   - `address`: Represents the address to which the electricity bill will be sent.
+
+2. toString Method: We need to override the `toString` method in the `ElectricityBill` class. This method is used to convert the object's details into a string format. In this case, it should return a string containing the meter number, customer name, and address.
+
+3. equals Method: The `equals` method needs to be overridden in the `ElectricityBill` class. This method is used to compare two
+  `ElectricityBill` objects for equality. The implementation should return `true` if the meter numbers of the two objects are the same.
+   It means we are only concerned with comparing the `meterNumber` property while ignoring `customerName` and `address`.
+
+4. hashCode Method: The `hashCode` method needs to be overridden in the `ElectricityBill` class. This method is used to calculate the hash code of an object. The implementation should return the `meterNumber` as the hash code.
+
+5. Test Class: We also need to create a test class (`TestElectricityBill`) to verify the functionality of the `ElectricityBill` class.
+
+6. Test Case Scenarios: In the test class, we will create three `ElectricityBill` objects with different meter numbers, customer names,
+  and addresses (`bill1`, `bill2`, and `bill3`). Then, we will use various methods to demonstrate the following scenarios:
+   - Use `toString` method to print the details of each `ElectricityBill` object.
+   - Use `equals` method to compare `bill1` with `bill2` and `bill1` with `bill3`.
+   - Use `hashCode` method to retrieve the hash code of each `ElectricityBill` object.
+
+7. Expected Output: The test class should output the details of each `ElectricityBill` object using `toString`, display the results of
+  `equals` method comparisons (whether the meter numbers are the same or not), and show the hash codes returned by the `hashCode` method.
+
+8. Output Explanation: The output of the test class shows the details of each `ElectricityBill` object and the results of comparing the
+   meter numbers. It demonstrates that `bill1` and `bill3` have the same meter number (`12345`), which makes the `equals` method return
+   `true`. However, `bill1` and `bill2` have different meter numbers, resulting in `equals` method returning `false`. The hash codes of the objects correspond to their respective meter numbers.

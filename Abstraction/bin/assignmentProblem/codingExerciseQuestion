@@ -1,0 +1,60 @@
+Abstraction
+1. Task Description
+
+The objective of this assignment is to create an abstract touch screen laptop interface with two methods: `scroll()` and `click()`.
+
+Laptop manufacturing companies, specifically HP and Dell, will implement this interface in their touch screen laptops. HP and Dell will provide an implementation for the `scroll()` method, while the `click()` method will be implemented by the final laptop implementation classes.
+
+
+
+2. Steps
+
+TouchscreenLaptop Interface:
+
+Create the `TouchscreenLaptop` interface. Define the following methods,
+
+    - `scroll()`: Represents the scroll functionality of the touch screen.
+
+    - `click()` : Represents the click functionality of the touch screen.
+
+
+
+Abstract Classes (HP and Dell):
+
+Create the abstract classes `HP` and `Dell`.
+
+Both `HP` and `Dell` will implement the `TouchScreenLaptop` interface.
+
+Provide a common implementation for the `scroll()` method in these abstract classes. However, they won't implement the `click()` method.
+
+
+
+Concrete Classes (HPNotebook and DellNotebook):
+
+Create the concrete classes `HPNotebook` and `DellNotebook`.
+
+Both classes will extend their respective abstract classes, `HP` and `Dell`.
+
+Implement the `click()` method in these classes to provide specific click functionality for HP notebooks and Dell notebooks.
+
+
+
+Runtime Polymorphism Demonstration:
+
+In the `main` class, demonstrate runtime polymorphism by creating instances of `HpNotebook` and `DellNotebook` using the `TouchscreenLaptop` interface on the left-hand side.
+
+Invoke `click()` and 'scroll' methods for `HpNotebook` and `DellNotebook` objects in that order.
+
+This illustrates how runtime polymorphism allows calling the appropriate `click()` method for Hp notebooks and Dell notebooks depending on the instance used.
+
+
+
+3. Expected Output
+
+Click Method From HPNoteBook
+
+Scroll Method from HPLaptop
+
+Click Method From DellNoteBook
+
+Scroll Method from DellLaptop

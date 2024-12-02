@@ -1,0 +1,64 @@
+Creating Optional Class Instance
+Optional class provides multiple methods to create an Optional instance for a provided value/object. Following are the corresponding methods with their syntaxes followed by an example:
+
+Optional.empty() method
+This method returns an Optional instance with empty value. It can be used to represent an absent value instead of null.
+
+Optional emptyOptional = Optional.empty();
+Optional.of() method
+This method returns an Optional instance with given not null value. If provided value is null, then it will throw a NullPointerException.
+
+String name = "John";
+Optional valueOptional = Optional.of(name);
+Optional.ofNullable() method
+This method returns an Optional instance with given value. If provided value is null, then it returns an empty Optional Instance.
+Optional emptyOptional = Optional.empty();
+
+----
+Checking Optional Class Instance Value
+Optional class provides following method to check if Optional instance has value or not. These methods should be used before using get() method to obtain the value of the Optional instance as get() method can throw null pointer exception in case underlying value is null.
+
+Optional.isPresent() method
+This method checks the current optional instance and returns true/false based on value being present or not.
+
+Optional emptyOptional = Optional.empty();
+boolean isValuePresent = emptyOptional.isPresent();
+Optional.isEmpty() method
+This method checks the current optional instance and returns true/false based on value being present or not. This method was added to Optional API in Java 11.
+
+Optional emptyOptional = Optional.empty();
+boolean isValuePresent = emptyOptional.isEmpty();
+
+---
+Using Default Value With Optional Class Methods
+Optional class provides following methods to get a default value from an Optional instance if value is not present.
+
+Optional.OrElse() method
+This method returns checks the current optional instance and returns its value if present otherwise it returns the provided default value.
+
+Optional<Integer> valueOptional = Optional.ofNullable(null);
+Integer value = valueOptional.orElse(Integer.valueOf(-1));
+Optional.OrElseGet(Supplier) method
+This method returns checks the current optional instance and returns its value if present otherwise it invokes the supplier function passed to the generate the default value and return the same.
+
+Optional<Integer> valueOptional = Optional.ofNullable(null);
+Integer value = valueOptional.orElseGet(()-> (int)(Math.random() * 10));
+
+---
+Optional Class Methods for Throwing Exception
+Optional class provides following methods to throw exception in case value is not present.
+
+Optional.OrElseThrow() method
+We can throw a custom exception in case a required field is not passed to handle the case gracefully using orElseThrow() method call.
+
+Optional<Integer> emptyOptional = Optional.empty();
+// this call will throw NullPointerException
+Integer value = emptyOptional.OrElseThrow();
+Optional.OrElseThrow(Supplier) method
+We can throw a custom exception in case a required field is not passed to handle the case gracefully using orElseThrow(supplier) method call.
+
+Optional<Integer> emptyOptional = Optional.empty();
+// this call will throw a custom exception as specified by the supplier function
+Integer value = emptyOptional.orElseThrow(()-> {throw new RuntimeException("value not present");} );
+
+---

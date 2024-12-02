@@ -1,0 +1,15 @@
+1. Task Description
+
+The objective is to create a Java class with a `main` method that uses the `Thread.sleep` method, which takes 1000 milliseconds as an argument. This method can throw a checked exception called `InterruptedException`. The initial approach is to use the `throws` keyword to declare that the `main` method can throw the `InterruptedException`.
+
+2. Step 1: Declare `InterruptedException` using `throws` on the main method
+
+3. Step 2: Handle `InterruptedException` using try-catch
+
+4. Step 3: Create a custom exception called MyThreadException
+
+5. Step 4: Use `throw` to throw `MyThreadException` inside the catch block:
+
+6.Step 5: Catch `MyThreadException` and handle it:
+
+7. Explanation: The final version of the code has a `MainThreadExample` class with a `main` method. The method uses `Thread.sleep(1000)` to pause the main thread for 1000 milliseconds. Since this method can throw `InterruptedException`, it is wrapped in a try-catch block. If `InterruptedException` occurs, the catch block throws a custom exception called `MyThreadException`, which is caught and handled in another catch block.The custom exception message is then printed as output.

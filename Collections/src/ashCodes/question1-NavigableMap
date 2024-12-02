@@ -1,0 +1,35 @@
+Navigable Map
+The Exercise is to understand NavigableMap and use its methods.
+
+1. Definition of NavigableMap:
+   - NavigableMap is a child interface of SortedMap.
+   - It is implemented by TreeMap.
+   - NavigableMap provides various useful methods that work on the map's keys and entries.
+
+2. Key and Value Data Type:
+   - The map being created has both keys and values as strings.
+   - Alphabets are used as keys, and corresponding values are arbitrary strings.
+
+3. Methods Demonstrated:
+   - `floorKey`: Finds the greatest key less than or equal to the given key.
+   - `lowerKey`: Finds the greatest key strictly less than the given key.
+   - `ceilingKey`: Finds the smallest key greater than or equal to the given key.
+   - `higherKey`: Finds the smallest key strictly greater than the given key.
+   - `pollFirstEntry`: Retrieves and removes the first entry from the map.
+   - `pollLastEntry`: Retrieves and removes the last entry from the map.
+   - `descendingMap`: Returns the map in descending order based on the keys.
+
+4. Create a TreeMap:
+   - The provided example creates a TreeMap with the following key-value pairs.Use the following method and print their results floorKey, lowerKey, ceilingKey, higherKey, pollFirstEntry, descendingMap
+     A => Apple
+     B => Boy
+     C => Cat
+     D => Dog
+
+5. Execution and Expected Output:
+C
+A
+D
+B
+A=Apple
+{D=Dog, C=Cat, B=Boy}

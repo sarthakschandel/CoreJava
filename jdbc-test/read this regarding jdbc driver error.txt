@@ -1,0 +1,36 @@
+INITIALLY I WAS GETTING THIS ERROR AS I WAS USING THE JDBC CONNECTOR NAMED mysql-connector-java-5.1.33-bin
+
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:935)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:924)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:870)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2311)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2064)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:395)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at JdbcTest.main(JdbcTest.java:18)
+
+AS I TYPED IN THE THING IN CHATGPT IT SHOWED ME VARIOUS WAYS TO CHECK FOR TROUBLESHOOTING 8WAYS TO BE SPECIFIC:
+
+The format of the JDBC URL must match the MySQL server configuration.
+
+For MySQL 8.x, the URL should use com.mysql.cj.jdbc.Driver and include the serverTimezone parameter if your server is in a timezone other than UTC. Update your connection string to:
+myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo?serverTimezone=UTC", "student", "student");
+
+SINCE THE TUTORIAL WAS USING MYSQL 5.X AND I HAVE 8.X ON MY SYSTEM, USING THE mysql-connector-j-9.1.0 INSTEAD OF mysql-connector-java-5.1.33-bin MADE IT WORK LIKE A CHARM!!

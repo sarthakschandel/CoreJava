@@ -1,0 +1,17 @@
+Arrays Binary Search
+
+1. Objective: The objective of the assignment is to work with the `binarySearch` method available in the `Arrays` class to find the index of a specific string `Z` in an array of strings - {"V","A","Z","P"};.
+
+2.  The method we are interested in is `binarySearch`, which is available in the `Arrays` class.
+
+3. The `binary search` method has several overloaded versions, which means there are multiple variations of this method with different parameters and functionalities. These versions allow you to pass an array and a key (in this case, a string 'Z') that you want to search for.
+
+4 The `binarySearch` method in the `Arrays` class is similar to `collections.binarySearch`, which indicates that the two methods have comparable functionalities, but they might be implemented in different classes or modules.
+
+5. Steps to Follow:
+   - Import the necessary module or class - ava.util.Arrays
+   - Define a string array - {"V","A","Z","P"};.
+
+6. Expected Output:
+Z is found at index 2
+

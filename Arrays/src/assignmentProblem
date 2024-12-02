@@ -1,0 +1,34 @@
+1. Task Description: The task is to print the array of strings in reverse order
+
+2. Operations to Perform:
+
+   - Create an array of strings.
+
+   - Display the elements of the reversed array
+
+3.  Array:    
+
+   courses = { "Java Web Services", "Spring Data REST", "Hibernate", "Spring in easy steps" }
+
+ 
+
+4. Algorithm Steps:
+
+   - Calculate the length of the original array.
+
+   - Use a for loop to iterate through the original array in reverse order.
+
+   - Display each element
+
+
+
+5. Expected Output:
+
+Spring in easy steps
+
+Hibernate
+
+Spring Data REST
+
+Java Web Services
+

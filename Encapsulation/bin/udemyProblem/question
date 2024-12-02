@@ -1,0 +1,25 @@
+Encapsulation
+
+1. Task Description
+   The main goal is to create a Java class named `Patient` with three fields: `id`, `name`, and `ssn`. The `id` field should be numeric, while the `name` and `ssn` fields should be strings.
+
+The class should follow the principles of encapsulation, making the fields private and providing getter and setter methods to access and modify them.
+
+2. Steps
+Patient Class
+   - Define the `Patient` class with three private fields: `id` (integer), `name`(String), and `ssn` (String).
+   - Provide getter methods for each field to allow access to their values.
+   - Implement setter methods for each field to enable modification of their values.
+
+Test Class
+   - Create a separate class named `Test`, which will serve as a test driver to demonstrate the functionality of the `Patient` class.
+   - Within the `Test` class, include the `main` method, which serves as the entry point of the program.
+`main` method
+     - A new `Patient` object is created using new Patient()
+     - The setter methods are used to initialize the `id`, `name`, and `ssn` properties of the `patient` object to new values as given below in Expected Output section.
+     - The getter methods are used to retrieve `id`, `name`, and `ssn` properties of the `patient` object. Display same using `System.out.println` as shown below.
+
+5. Expected Output:
+Id: 123
+Name: Bharath
+SSN: 1234567890
